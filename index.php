@@ -36,7 +36,16 @@ if (!$db) {
                 </div>
             </div>';
         } else {
+            $random_num = rand(1, mysqli_num_rows($query_result));
+            $i = 0;
+            $random_quote = null;
+
+            // On charge toutes les citations
             foreach ($query_result as $quote) {
+                $i += 1;
+                if ($i == $random_num) {
+                    $random_quote = $quote;
+                }
                 $result .= '<div class="card card-quote">
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
@@ -46,6 +55,18 @@ if (!$db) {
                     </div>
                 </div><br>';
             }
+
+            $random_quote = '<div class="card card-quote">
+                    <div class="card-header">
+                        Citation aléatoire pour vous porter chance
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>' . $random_quote["Text"] . '</p>
+                            <footer class="blockquote-footer">' . $random_quote["Author"] . ', ' . $random_quote["Date"] . '</footer>
+                        </blockquote>
+                    </div>
+                </div><br>';
         }
     } else {
         $result = '<div class="card bg-danger" style="color: white">
@@ -124,6 +145,8 @@ if (!$db) {
             </div>
         </div>
 
+        <?php echo $random_quote; ?>
+        <br>
         <?php echo $result; ?>
 
         <footer class="pt-3 mt-4 text-muted border-top">
