@@ -1,3 +1,38 @@
+<?php
+
+if (isset($_POST['button_submit'])) {
+    // Si l'utilisateur accède à cette page avec le formulaire de rempli :
+    // On peut poster la citation.
+
+    $db = mysqli_connect("localhost", "root", "", "livre-dor");
+
+    if (!$db) die("Impossible de se connecter à la base de données : " . mysqli_error($db));
+
+    $db->set_charset("utf8");
+
+    if (empty($_POST['quote'])) die("Veuillez saisir une citation.");
+    if (empty($_POST['author'])) die("Veuillez saisir un auteur.");
+    if (empty($_POST['year'])) die("Veuillez saisir une date.");
+
+    //TODO: Vérifier si la citation n'existe pas déjà dans la base de données.
+
+    // Création de la requête MySQL :
+    $quote = mysqli_real_escape_string($db, $_POST['quote']);
+    $author = mysqli_real_escape_string($db,  $_POST['author']);
+    $year = mysqli_real_escape_string($db, $_POST['year']);
+
+    $insert_quote_query = "INSERT INTO quotes (Text, Author, Date) VALUES ('$quote', '$author', $year)";
+
+    // Exécution de la requête MySQL :
+    if (mysqli_query($db, $insert_quote_query) === TRUE) {
+        header("Location: /", true);
+    } else {
+        die("Impossible d'insérer la citation : " . mysqli_error($db));
+    }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -67,20 +102,20 @@
                 Ajouter une citation
             </div>
             <div class="card-body">
-                <form>
+                <form action="add.php" method="post">
                     <div class="mb-3">
                         <label for="inputQuote" class="form-label">Citation</label>
-                        <input type="text" class="form-control" id="inputQuote">
+                        <input type="text" class="form-control" id="inputQuote" name="quote">
                     </div>
                     <div class="mb-3">
                         <label for="inputAuthor" class="form-label">Auteur</label>
-                        <input type="text" class="form-control" id="inputAuthor">
+                        <input type="text" class="form-control" id="inputAuthor" name="author">
                     </div>
                     <div class="mb-3">
                         <label for="inputYear" class="form-label">Date (année)</label>
-                        <input type="number" class="form-control" id="inputYear">
+                        <input type="number" class="form-control" id="inputYear" name="year">
                     </div>
-                    <button type="submit" class="btn btn-primary">Publier</button>
+                    <button type="submit" class="btn btn-primary" name="button_submit">Publier</button>
                 </form>
             </div>
         </div>
