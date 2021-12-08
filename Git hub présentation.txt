@@ -1,0 +1,12 @@
+Le site consiste à afficher un nombre de citations que nous pouvons apercçevoir. De plus, il est possible d'ajouter une citation et de les classer par album. Pour ce projet, nous sommes une équipe de 6 consituée des membres suivants : Wilhem HARAT, Jeremy SELLAM, Hugo PANEL, Mohamed ZAMMIT CHATTI, Victor BOULET et Evan ZANZUCCHI. Nous site se nomme de la manière suivante : "Le Livre d'Or". Il s'agit d'un site qui regroupera les différents citations de nos 2 années à l'Efrei Paris. Ce site permettra à l'utilisateur d'ajouter sa propre citation. Pour cela, nous avons ajouté un bouton sur la page de garde : "Ajouter une citation" ouvrant un nouvel onglet. Dans cet onglet, le site nous demandera trois choses soit : la citation, le nom et prénom de l'auteur, ainsi que l'année. Nous avons également une autre fonctionnalité qui comportera la citation du jour. Cette citation change tous les jours. Au cadre de ce site, nous avons différents onglets :
+
+"L’accueil" qui contient notre page de garde
+"ajouter une citation" qui sera l'endroit ou nous ajouterons notre citation,
+"a propos" qui sera la page qui expliquera brièvement notre site
+"nous contacter" pour pouvoir nous demander des informations sur notre site.
+Le code est principalement effectué en HTML, et nous avons réparti les tâches de la façon suivante :
+
+Jeremy SELLAM et Mohamed ZAMMIT CHATTI se chargeront de l'interface
+Wilhem HARAT et Victor BOULET se chargeront du wiki, de décrire à la fois le code et le site
+Evan ZANZUCCHI est le chef de projet
+Hugo : qui est developpeur back
