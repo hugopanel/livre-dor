@@ -1,5 +1,5 @@
 # Livre d'Or
-Projet Final du cours Introduction au Delivery de Projet : Le Livre d'Or
+Projet Final du cours Introduction au Delivery de Projet : Le Livre d'Or.
 Livre de citations.
 
 ## Répartition des rôles :
