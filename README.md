@@ -1,5 +1,6 @@
 # Livre d'Or
 Projet Final du cours Introduction au Delivery de Projet : Le Livre d'Or
+Livre de citations.
 
 ## Répartition des rôles :
 - Développeur Back : Hugo
@@ -8,3 +9,4 @@ Projet Final du cours Introduction au Delivery de Projet : Le Livre d'Or
 - Chef de projet : Evan
 - Gérant du Wiki : Victor
 - Gérant Du Wiki : Wilhem 
+
