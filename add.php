@@ -80,7 +80,7 @@ if (isset($_POST['button_submit'])) {
                         <li><a href="index.php" class="nav-link px-2 link-dark">Accueil</a></li>
                         <li><a href="add.php" class="nav-link px-2 link-secondary">Ajouter une citation</a></li>
                         <li><a href="about.html" class="nav-link px-2 link-dark">A propos du Livre d'or</a></li>
-                        <li><a href="contact.html" class="nav-link px-2 link-secondary">Conctact</a></li>
+                        <li><a href="contact.html" class="nav-link px-2 link-dark">Contact</a></li>
 
                     </ul>
 
