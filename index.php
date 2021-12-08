@@ -128,7 +128,7 @@ if (!$db) {
                     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="#" class="nav-link px-2 link-secondary">Accueil</a></li>
                         <li><a href="add.php" class="nav-link px-2 link-dark">Ajouter une citation</a></li>
-                        <li><a href="about.html" class="nav-link px-2 link-dark">A Propos du Livre d'or</a></li>
+                        <li><a href="about.html" class="nav-link px-2 link-dark">A propos du Livre d'or</a></li>
                         <li><a href="contact.html" class="nav-link px-2 link-dark">Contact</a></li>
                     </ul>
 
